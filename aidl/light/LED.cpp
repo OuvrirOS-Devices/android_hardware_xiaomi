@@ -13,7 +13,7 @@ namespace android {
 namespace hardware {
 namespace light {
 
-static const uint32_t kDefaultMaxLedBrightness = 255;
+static const uint32_t kDefaultMaxLedBrightness = 128;
 
 LED::LED(std::string type) : mBasePath("/sys/class/leds/" + type + "/") {
     if (!readFromFile(mBasePath + "max_brightness", &mMaxBrightness))
